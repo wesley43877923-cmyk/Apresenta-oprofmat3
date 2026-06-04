@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defesa de Mestrado PROFMAT - Wesley Oliveira Brum</title>
+  <meta name="description" content="Apresentação de defesa de mestrado PROFMAT UERJ sobre o conhecimento especializado do professor de matemática no ensino de logaritmos por Wesley Oliveira Brum.">
+  
+  <!-- Estilos da Apresentação -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Configuração Avançada do MathJax para Renderização de LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        packages: {'[+]': ['ams']}
+      },
+      options: {
+        ignoreHtmlClass: 'tex2jax_ignore',
+        processHtmlClass: 'tex2jax_process'
+      },
+      loader: { load: ['[tex]/ams'] }
+    };
+  </script>
+  <!-- Carregamento Assíncrono do MathJax v3 -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+  <!-- FAIXA SUPERIOR: Identidade Visual e Título -->
+  <header id="app-header">
+    <div class="logo-container" id="logo-uerj-wrapper">
+      <img src="assets/logo-uerj.png" alt="Logomarca UERJ" id="logo-uerj">
+    </div>
+    
+    <h1 id="slide-title-header">Título do Slide</h1>
+    
+    <div class="logo-container" id="logo-profmat-wrapper">
+      <img src="assets/logo-profmat-capes.png" alt="Logomarca PROFMAT CAPES" id="logo-profmat">
+    </div>
+  </header>
+
+  <!-- ÁREA CENTRAL: Apresentação de Conteúdo (Maximizada) -->
+  <main id="app-main">
+    <!-- Viewport do slide: redimensiona dinamicamente mantendo a proporção 16:9 -->
+    <div id="slide-viewport" class="tex2jax_process">
+      <!-- Os slides serão inseridos dinamicamente aqui pelo app.js -->
+      <div style="display: flex; justify-content: center; align-items: center; height: 100%; font-size: 1.2rem; color: var(--text-muted);">
+        Carregando apresentação...
+      </div>
+    </div>
+
+    <!-- Gaveta/Tooltip de Ajuda dos Atalhos do Teclado -->
+    <div id="keyboard-help-tooltip">
+      <h5>Atalhos de Teclado</h5>
+      <ul>
+        <li><span>Avançar Slide</span> <kbd>→</kbd> ou <kbd>Espaço</kbd></li>
+        <li><span>Voltar Slide</span> <kbd>←</kbd></li>
+        <li><span>Primeiro Slide</span> <kbd>Home</kbd></li>
+        <li><span>Último Slide</span> <kbd>End</kbd></li>
+        <li><span>Tela Cheia</span> <kbd>F</kbd></li>
+        <li><span>Ajuda</span> <kbd>H</kbd> ou <kbd>?</kbd></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- FAIXA INFERIOR: Navegação e Controles -->
+  <footer id="app-footer">
+    <!-- Barra de Progresso Interativa -->
+    <div id="progress-container" title="Clique para navegar de forma rápida">
+      <div id="progress-bar"></div>
+    </div>
+    
+    <!-- Controles de Rodapé -->
+    <div class="footer-controls">
+      <!-- Lado Esquerdo: Ferramentas auxiliares -->
+      <div class="controls-left">
+        <button id="btn-play" class="btn-control" title="Iniciar reprodução automática (5 segundos por slide)">
+          <!-- Ícone Play SVG -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Apresentar
+        </button>
+        <button id="btn-help" class="btn-control" title="Ver atalhos de teclado">
+          <!-- Ícone Help SVG -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+          </svg>
+          Atalhos
+        </button>
+      </div>
+
+      <!-- Centro: Navegação Principal -->
+      <div class="controls-center">
+        <!-- Botão Voltar -->
+        <button id="btn-prev" class="btn-control btn-nav" title="Slide Anterior (Seta Esquerda)">
+          &larr; Voltar
+        </button>
+        
+        <!-- Menu Dropdown para pular slides -->
+        <div class="slide-select-wrapper">
+          <select id="slide-select" title="Selecione o slide para pular"></select>
+        </div>
+        
+        <!-- Indicador Numérico -->
+        <span id="slide-counter">0 / 0</span>
+        
+        <!-- Botão Próximo -->
+        <button id="btn-next" class="btn-control btn-nav" title="Próximo Slide (Seta Direita ou Espaço)">
+          Avançar &rarr;
+        </button>
+      </div>
+
+      <!-- Lado Direito: Visualização -->
+      <div class="controls-right">
+        <button id="btn-fullscreen" class="btn-control" title="Alternar Modo Tela Cheia (F)">
+          <!-- Ícone Expand SVG -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+          Tela Cheia
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Integradores da Apresentação -->
+  <script src="slides.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
