@@ -457,7 +457,7 @@ const slidesData = [
       content: `
       <div style="flex: 1; padding: 0; overflow: hidden; display: flex;">
         <iframe 
-          src="https://https://www.geogebra.org/calculator/saktmmxk?embed" 
+          src="https://www.geogebra.org/calculator/saktmmxk?embed" 
           style="width: 100%; height: 100%; border: none; display: block;" 
           allowfullscreen 
           frameborder="0">
