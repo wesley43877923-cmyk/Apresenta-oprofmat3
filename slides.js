@@ -341,7 +341,7 @@ const slidesData = [
             <img src="assets/fig1.png" alt="Régua de cálculo - escalas logarítmicas" style="max-width: 100%; max-height: 100%; object-fit: contain;">
           </div>
 	
-          <p style="color: var(--primary); text-align: justify; font-weight: bold; margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.4;">
+          <p style="color: var(--primary); text-align: justify; font-weight: bold; margin-top: 0.5rem; font-size: 0.85rem; line-height: 2;">
             Sob a perspectiva histórica, a régua de cálculo materializou as tábuas de logaritmos em um instrumento físico que funcionou como "computador analógico" por quase quatro séculos. Seu funcionamento baseia-se em escalas logarítmicas de espaçamento variável, onde o ato físico de deslizar as réguas realiza a adição de comprimentos, transformando visualmente operações de multiplicação em soma através da propriedade fundamental log(a·b)=log a+log b. Na Atividade 1.2 do produto educacional, esse instrumento é ressignificado didaticamente para conectar o registro algébrico ao geométrico.
           </p>
         </div>
@@ -450,9 +450,62 @@ const slidesData = [
       </div>
     `
   },
-
-  // ===================== SLIDE 14: TRANSFORMAÇÃO DE ÁREA =====================
+ // ===================== SLIDE 14: TRANSFORMAÇÃO DE ÁREA =====================
+{
+  "title": "O Núcleo Conceitual dos Módulos 2 e 3",
+  "layout": "default",
+  "content": `
+    
+        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem;">
+          <strong style="font-size: 1.5rem;">Duas porpostas de introdução do conceito.</strong>
+          <p style="font-size: 1rem; margin-top: 0.2rem; line-height: 2.5;">
+            A centralidade dos Módulos 2 e 3 reside no fato de eles apresentarem as duas "portas de entrada" para o conceito de logaritmo, fundamentando a transição da utilidade prática para a abstração matemática. O Módulo 2 foca na formalização algébrica como função inversa da exponencial, utilizando o estratégias para contornar o problema da irracionalidade (como na equação $2^x = 5$) para justificar a necessidade do símbolo logarítmico, o Módulo 3 promove uma abordagem difernte ao definir o logaritmo natural de forma autônoma como a área sob a hipérbole $y = frac{1}{x}$, utilizando somas trapezoidais no GeoGebra para contornara necessidade dos conceitos de limite e integral. Juntos, esses módulos são vitais para o  debate do conhecimento especializado do professor (MTSK), pois permitem um caminho que perpassa todos os subdominios para uma tomada de decisão. 
+          </p>
+        </div>
+        
+    </div>
+  `
+},
+  // ===================== SLIDE 142: TRANSFORMAÇÃO DE ÁREA =====================
   {
+  "title": "Módulo 3: O Logaritmo como Área sob a Hipérbole",
+  "layout": "default",
+  "content": `
+    <div class="grid-2">
+      <div>
+        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">O Desafio Epistemológico e a Solução Didática</h3>
+        <div class="card" style="margin-bottom: 0.5rem; border-left-color: var(--secondary); padding: 0.6rem;">
+          <strong style="font-size: 0.9rem;">A Barreira do Cálculo Formal</strong>
+          <p style="font-size: 0.8rem; margin-top: 0.2rem;line-height: 2;">A definição clássica do logaritmo natural como <span class="formula">$\\ln(x) = \\int_{1}^{x} \\frac{1}{t} dt$</span> exige conhecimentos de Cálculo Integral e limites formais, criando um obstáculo intransponível para a introdução rigorosa do tema no Ensino Médio.</p>
+        </div>
+        <div class="card" style="padding: 0.6rem; background-color: rgba(0,0,0,0.02);">
+          <strong style="font-size: 0.9rem;">A Solução: Noção Intuitiva de Limite</strong>
+          <p style="font-size: 0.8rem; margin-top: 0.2rem;line-height: 2">A proposta contorna essa dificuldade utilizando <strong>somas trapezoidais dinâmicas no GeoGebra</strong>. Ao aumentar o número de partições ($n$), o aluno visualiza a convergência da área aproximada para um valor fixo. Isso constrói uma <strong>noção intuitiva de limite</strong> e acumulação, dispensando o formalismo analítico, mas preservando o rigor conceitual (mobilizando KoT e KSM).</p>
+        </div>
+      </div>
+      
+      <div>
+        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">As Atividades Investigativas do Módulo</h3>
+        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem;">
+          <strong style="font-size: 0.9rem;">Atividade 1: Descobrindo a Área e o Número $e$</strong>
+          <p style="font-size: 0.8rem; margin-top: 0.2rem;line-height: 2">O licenciando manipula o número de trapézios para aproximar a área sob <span class="formula">$y = \\frac{1}{x}$</span>. O desafio inverso (encontrar $x$ tal que a área seja 1) leva à descoberta empírica e significativa da constante de Euler ($e \\approx 2,718$).</p>
+        </div>
+        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem;">
+          <strong style="font-size: 0.9rem;">Atividade 2: Caracterização Geométrica $L(ab) = L(a) + L(b)$</strong>
+          <p style="font-size: 0.8rem; margin-top: 0.2rem;line-height: 2">Uso da transformação linear <span class="formula">$T(x,y) = (kx, \\frac{y}{k})$</span>, que preserva áreas. O aluno "desloca" visualmente a área de $[1, a]$ para o intervalo $[b, ab]$, provando geometricamente, sem álgebra complexa, a propriedade fundamental do produto.</p>
+        </div>
+        <div class="card" style="padding: 0.6rem;">
+          <strong style="font-size: 0.9rem;">Atividade 3: Potências e Mudança de Base</strong>
+          <p style="font-size: 0.8rem; margin-top: 0.2rem;line-height: 2">Exploração da família de hipérboles <span class="formula">$y = \\frac{k}{x}$</span>. Visualiza-se que esticar a curva verticalmente multiplica a área por $k$, deduzindo <span class="formula">$L(a^k) = k \\cdot L(a)$</span> e compreendendo a mudança de base não como uma fórmula mágica, mas como uma conversão de escalas: .</p>
+        </div>
+      </div>
+    </div>
+  `
+},
+
+
+ // ===================== SLIDE 143: TRANSFORMAÇÃO DE ÁREA =====================
+{
     title: "Transformação de Área: T(x,y) = (kx, y/k)",
     layout: "default",
      content: `
@@ -466,43 +519,6 @@ const slidesData = [
       </div>
     `
   },
-
- // ===================== SLIDE 142: TRANSFORMAÇÃO DE ÁREA =====================
-{
-  "title": "Módulo 3: O Logaritmo como Área sob a Hipérbole",
-  "layout": "default",
-  "content": `
-    <div class="grid-2">
-      <div>
-        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">O Desafio Epistemológico e a Solução Didática</h3>
-        <div class="card" style="margin-bottom: 0.5rem; border-left-color: var(--secondary); padding: 0.6rem;">
-          <strong style="font-size: 0.9rem;">A Barreira do Cálculo Formal</strong>
-          <p style="font-size: 0.8rem; margin-top: 0.2rem;">A definição clássica do logaritmo natural como <span class="formula">$\\ln(x) = \\int_{1}^{x} \\frac{1}{t} dt$</span> exige conhecimentos de Cálculo Integral e limites formais, criando um obstáculo intransponível para a introdução rigorosa do tema no Ensino Médio.</p>
-        </div>
-        <div class="card" style="padding: 0.6rem; background-color: rgba(0,0,0,0.02);">
-          <strong style="font-size: 0.9rem;">A Solução: Noção Intuitiva de Limite</strong>
-          <p style="font-size: 0.8rem; margin-top: 0.2rem;">A proposta contorna essa dificuldade utilizando <strong>somas trapezoidais dinâmicas no GeoGebra</strong>. Ao aumentar o número de partições ($n$), o aluno visualiza a convergência da área aproximada para um valor fixo. Isso constrói uma <strong>noção intuitiva de limite</strong> e acumulação, dispensando o formalismo analítico, mas preservando o rigor conceitual (mobilizando KoT e KSM).</p>
-        </div>
-      </div>
-      
-      <div>
-        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">As Atividades Investigativas do Módulo</h3>
-        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem;">
-          <strong style="font-size: 0.9rem;">Atividade 1: Descobrindo a Área e o Número $e$</strong>
-          <p style="font-size: 0.8rem; margin-top: 0.2rem;">O licenciando manipula o número de trapézios para aproximar a área sob <span class="formula">$y = \\frac{1}{x}$</span>. O desafio inverso (encontrar $x$ tal que a área seja 1) leva à descoberta empírica e significativa da constante de Euler ($e \\approx 2,718$).</p>
-        </div>
-        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem;">
-          <strong style="font-size: 0.9rem;">Atividade 2: Caracterização Geométrica $L(ab) = L(a) + L(b)$</strong>
-          <p style="font-size: 0.8rem; margin-top: 0.2rem;">Uso da transformação linear <span class="formula">$T(x,y) = (kx, \\frac{y}{k})$</span>, que preserva áreas. O aluno "desloca" visualmente a área de $[1, a]$ para o intervalo $[b, ab]$, provando geometricamente, sem álgebra complexa, a propriedade fundamental do produto.</p>
-        </div>
-        <div class="card" style="padding: 0.6rem;">
-          <strong style="font-size: 0.9rem;">Atividade 3: Potências e Mudança de Base</strong>
-          <p style="font-size: 0.8rem; margin-top: 0.2rem;">Exploração da família de hipérboles <span class="formula">$y = \\frac{k}{x}$</span>. Visualiza-se que esticar a curva verticalmente multiplica a área por $k$, deduzindo <span class="formula">$L(a^k) = k \\cdot L(a)$</span> e compreendendo a mudança de base não como uma fórmula mágica, mas como uma conversão de escalas: .</p>
-        </div>
-      </div>
-    </div>
-  `
-},
 
   // ===================== SLIDE 15: GEOGEBRA - ÁREA =====================
   {
@@ -723,19 +739,61 @@ const slidesData = [
     </div>
   `
 },
+ // ===================== SLIDE : MAPEAMENTO MTSK =====================
+{
+  "title": "Módulo 5: Aplicações Transversais  dos Logaritmos",
+  "layout": "default",
+  "content": `
+    <div class="grid-2">
+      <div>
+        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--primary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">Onde vou usar isso?</h3>
+        <div class="card" style="margin-bottom: 0.5rem; padding: 0.6rem; border-left-color: var(--secondary);">
+          <strong style="font-size: 1rem;">Conexões Transversais (KSM)</strong>
+          <p style="font-size: 1rem; margin-top: 0.2rem; line-height: 2;">O Módulo 5 tem como objetivo geral mostrar que os logaritmos não são apenas um conteúdo escolar isolado, mas uma ferramenta para compreender fenômenos em diversas áreas. A intenção é desenvolver a percepção de que a estrutura matemática permanece a mesma, independentemente do contexto em que é aplicada, o que ajuda a criar conexões entre diferentes saberes. Ao alinhar o ensino com as diretrizes da BNCC, busca-se oferecer ao futuro professor um repertório que dê sentido prático ao aprendizado, transformando a matemática em uma linguagem capaz de interpretar situações do mundo real </p>
+        </div>
+        </div>
+      
+      <div>
+        <h3 style="color: var(--primary); font-size: 1rem; border-bottom: 2px solid var(--secondary); padding-bottom: 0.3rem; margin-bottom: 0.5rem;">Algumas Aplicações</h3>
+        <div class="card" style="margin-bottom: 0.4rem; padding: 0.5rem;">
+          <strong style="font-size: 0.85rem;">1. Biologia: Lei de Kleiber (Leis de Potência)</strong>
+          <p style="font-size: 0.75rem; margin-top: 0.1rem;">Relação entre massa e metabolismo ($B = k \\cdot M^{3/4}$). Linearização via logaritmos para revelar o expoente alométrico em gráficos de múltiplas escalas.</p>
+        </div>
+        <div class="card" style="margin-bottom: 0.4rem; padding: 0.5rem;">
+          <strong style="font-size: 0.85rem;">2. Estatística/Forense: Lei de Benford</strong>
+          <p style="font-size: 0.75rem; margin-top: 0.1rem;">A distribuição contraintuitiva do primeiro dígito: $P(d) = \\log_{10}\\left(1 + \\frac{1}{d}\\right)$. Uso em auditoria para detecção de fraudes contábeis.</p>
+        </div>
+        <div class="card" style="margin-bottom: 0.4rem; padding: 0.5rem;">
+          <strong style="font-size: 0.85rem;">3. Medicina: Farmacocinética</strong>
+          <p style="font-size: 0.75rem; margin-top: 0.1rem;">Decaimento exponencial de fármacos ($C(t) = C_0 e^{-kt}$). Cálculo de meia-vida e intervalos de dosagem usando logaritmos para evitar toxicidade.</p>
+        </div>
+        <div class="card" style="margin-bottom: 0.4rem; padding: 0.5rem;">
+          <strong style="font-size: 0.85rem;">4. Arqueologia: Datação por Carbono-14</strong>
+          <p style="font-size: 0.75rem; margin-top: 0.1rem;">A "chave do tempo": datação de fósseis isolando a variável temporal $t$ na equação de decaimento radioativo $N(t) = N_0 e^{-\\lambda t}$.</p>
+        </div>
+        <div class="card" style="padding: 0.5rem;">
+          <strong style="font-size: 0.85rem;">5. Geofísica: Escala Richter</strong>
+          <p style="font-size: 0.75rem; margin-top: 0.1rem;">Compressão de ordens de grandeza astronômicas: $M = \\log_{10}\\left(\\frac{A}{A_0}\\right)$. A diferença entre progressão aritmética na magnitude e geométrica na energia liberada.</p>
+        </div>
+      </div>
+    </div>
+  `
+},
+// ===================== SLIDE: MAPEAMENTO MTSK =====================
+
 {
   "title": "Conclusão – O que foi realizado",
   "layout": "default",
   "content": `
 <div class="card" style="border-left-color: var(--secondary); padding: 0.6rem;">
     <div style="text-align: center; padding: 1rem; display: flex; flex-direction: column; justify-content: center; height: 100%;">
-      <p style="font-size: 0.9rem; line-height: 1.6; text-align: justify;">
+      <p style="font-size: 1.2rem; line-height: 2; text-align: justify;">
         A pesquisa caracterizou, à luz do modelo <strong>MTSK</strong>, o conhecimento especializado necessário para o ensino de logaritmos, mapeando subdomínios como <strong>KoT, KSM, KMT, KFLM, KMLS</strong> e <strong>KPM</strong>. 
       </p>
-      <p style="font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-top: 0.5rem;">
-        Foram analisadas criticamente duas abordagens de introdução do conceito – a inversa da exponencial e a área sob a hipérbole – comparando suas bases epistemológicas e viabilidade didática. Investigou-se a irracionalidade de muitos logaritmos e a análise variacional das funções exponencial e logarítmica, conectando esses temas à modelagem de fenômenos reais. 
+      <p style="font-size: 1.2rem; line-height: 2; text-align: justify; margin-top: 0.5rem;">
+        Foram analisadas criticamente duas abordagens de introdução do conceito – a inversa da exponencial e a área sob a hipérbole comparando suas bases epistemológicas e viabilidade didática. Investigou-se a irracionalidade de muitos logaritmos e a análise variacional das funções exponencial e logarítmica, conectando esses temas à modelagem de fenômenos reais. 
       </p>
-      <p style="font-size: 0.9rem; line-height: 1.6; text-align: justify; margin-top: 0.5rem;">
+      <p style="font-size: 1.2rem; line-height: 2; text-align: justify; margin-top: 0.5rem;">
         Como resultado, estruturou-se um curso de extensão de cinco módulos reflexivos, com tarefas investigativas, história da matemática, múltiplos registros de representação e uso de GeoGebra, incorporando diretamente os conhecimentos especializados mapeados.
       </p>
     </div>
