@@ -648,3 +648,246 @@ body:fullscreen {
 .slide-wrapper::-webkit-scrollbar-thumb:hover {
   background: rgba(0,0,0,0.3);
 }
+
+/* ============================================
+   SECTION 26: MOBILE RESPONSIVENESS
+   ============================================ */
+
+/* --- Breakpoint principal: telas até 768px --- */
+@media (max-width: 768px) {
+
+  /* Header: esconde logos, mantém só o título */
+  #app-header {
+    height: 50px;
+    min-height: 50px;
+    padding: 0 12px;
+  }
+
+  #logo-uerj-wrapper,
+  #logo-profmat-wrapper {
+    display: none;
+  }
+
+  #slide-title-header {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  /* Footer: empilha controles em duas linhas */
+  #app-footer {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 6px;
+  }
+
+  .footer-controls {
+    flex-wrap: wrap;
+    padding: 4px 10px;
+    gap: 4px;
+  }
+
+  /* Esconde os botões laterais menos usados (Play e Atalhos) em mobile */
+  .controls-left {
+    display: none;
+  }
+
+  /* Botão de tela cheia fica menor */
+  .controls-right .btn-control {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* Centro: ocupa toda a largura */
+  .controls-center {
+    order: 1;
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .controls-right {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Botões de navegação menores */
+  .btn-nav {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
+  /* Dropdown reduz */
+  #slide-select {
+    font-size: 0.78rem;
+    padding: 6px 24px 6px 8px;
+    max-width: 120px;
+  }
+
+  #slide-counter {
+    font-size: 0.78rem;
+    min-width: 40px;
+  }
+
+  /* Slide viewport: recalcula altura restante */
+  #app-main {
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Slides: padding menor */
+  .slide-wrapper {
+    padding: 14px 16px;
+  }
+
+  /* Layout título: ajusta fontes */
+  .slide-wrapper[data-layout="title"] {
+    padding: 20px 20px;
+  }
+
+  .slide-wrapper[data-layout="title"] h1 {
+    font-size: 1.1rem !important;
+  }
+
+  .slide-wrapper[data-layout="title"] p {
+    font-size: 0.85rem !important;
+  }
+
+  /* Two-columns: empilha em mobile */
+  .slide-wrapper[data-layout="two-columns"] {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Grids: sempre uma coluna em mobile */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  /* Cards: padding menor */
+  .card {
+    padding: 0.7rem;
+  }
+
+  /* Textos gerais: leve redução */
+  p, li {
+    font-size: 0.85rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  h4 {
+    font-size: 0.88rem;
+  }
+
+  /* Blockquote menor */
+  blockquote {
+    font-size: 0.88rem;
+    padding: 0.9rem 1rem;
+  }
+
+  /* Highlight menor */
+  .highlight {
+    font-size: 0.88rem !important;
+    padding: 0.6rem 0.8rem;
+  }
+
+  /* Tooltip de atalhos: posiciona acima do footer */
+  #keyboard-help-tooltip {
+    bottom: 100px;
+    left: 10px;
+    width: calc(100vw - 20px);
+    font-size: 0.78rem;
+  }
+
+  /* Tabelas: fonte menor e scroll horizontal */
+  table {
+    font-size: 0.78rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table th,
+  table td {
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+}
+
+/* --- Breakpoint extra pequeno: até 480px (iPhone SE etc.) --- */
+@media (max-width: 480px) {
+  #app-header {
+    height: 44px;
+    min-height: 44px;
+  }
+
+  #slide-title-header {
+    font-size: 0.78rem;
+  }
+
+  .btn-nav {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  #slide-select {
+    max-width: 100px;
+    font-size: 0.72rem;
+  }
+
+  .slide-wrapper {
+    padding: 10px 12px;
+  }
+
+  .slide-wrapper[data-layout="title"] h1 {
+    font-size: 0.95rem !important;
+  }
+
+  p, li {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  /* Proof steps e fórmulas */
+  .proof-steps {
+    padding: 0.6rem;
+  }
+
+  .proof-steps p {
+    font-size: 0.78rem;
+  }
+}
+
+/* --- Landscape em mobile: aproveita largura --- */
+@media (max-width: 768px) and (orientation: landscape) {
+  #app-header {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  #app-footer {
+    padding-bottom: 2px;
+  }
+
+  .controls-right {
+    display: none; /* Esconde fullscreen em landscape — já ocupa a tela toda */
+  }
+
+  .controls-center {
+    width: auto;
+    flex: 1;
+  }
+
+  .slide-wrapper {
+    padding: 8px 14px;
+  }
+}
