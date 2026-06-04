@@ -452,15 +452,18 @@ const slidesData = [
     title: "Transformação de Área: T(x,y) = (kx, y/k)",
     layout: "default",
     content: `
+      content: `
       <div class="center" style="flex: 1;">
-        <h3 style="font-size: 1.4rem; color: var(--primary); margin-bottom: 1rem;">Exploração Interativa</h3>
-        <p style="font-size: 1.05rem; max-width: 800px; margin-bottom: 2rem; color: var(--text);">
-          A transformação geométrica <strong>T(x, y) = (kx, y/k)</strong> preserva a área ao ser aplicada nos pontos de polígonos sob a hipérbole.
-          <br><br>
-          <em>Clique no botão abaixo para abrir a aplicação em tela cheia e manipular o valor de <strong>k</strong>.</em>
-        </p>
-        <button class="btn-open-app" onclick="openApp()">Abrir Aplicação Interativa</button>
+      content: `
+      <div style="flex: 1; padding: 0; overflow: hidden; display: flex;">
+        <iframe 
+          src="https://https://www.geogebra.org/calculator/saktmmxk?embed" 
+          style="width: 100%; height: 100%; border: none; display: block;" 
+          allowfullscreen 
+          frameborder="0">
+        </iframe>
       </div>
+
     `
   },
 
