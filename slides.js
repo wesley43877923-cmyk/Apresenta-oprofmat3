@@ -451,10 +451,7 @@ const slidesData = [
   {
     title: "Transformação de Área: T(x,y) = (kx, y/k)",
     layout: "default",
-    content: `
-      content: `
-      <div class="center" style="flex: 1;">
-      content: `
+     content: `
       <div style="flex: 1; padding: 0; overflow: hidden; display: flex;">
         <iframe 
           src="https://www.geogebra.org/calculator/saktmmxk?embed" 
@@ -463,7 +460,6 @@ const slidesData = [
           frameborder="0">
         </iframe>
       </div>
-
     `
   },
 
