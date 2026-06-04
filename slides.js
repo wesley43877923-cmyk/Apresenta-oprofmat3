@@ -778,7 +778,7 @@ const slidesData = [
         Aos companheiros do grupo <strong>“Me salva Profmat”</strong> – Anderson, Ângelo, Jefferson e Lígia – a culpa por qualquer acerto é inteiramente de vocês.
       </p>
       <p style="font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.4;">
-        À minha esposa <strong>Évile</strong>: sem a tranquilidade que ela proporciona na minha vida, esse sonho não teria sido realizado.
+        À minha esposa <strong>Évile</strong>: Sem a tranquilidade que ela proporciona na minha vida, esse sonho não teria sido realizado.
       </p>
       <p style="font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.4;">
         À UERJ e ao PROFMAT, pela oportunidade de construir um produto educacional com base sólida.
